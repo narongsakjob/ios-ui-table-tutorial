@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource,
-    UITableViewDelegate {
+    UITableViewDelegate,UITextFieldDelegate {
     
     @IBOutlet weak var mTableview:UITableView!
     var dataSource:NSMutableArray = NSMutableArray()
@@ -17,7 +17,14 @@ class ViewController: UIViewController, UITableViewDataSource,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        headerView.frame = CGRect(x:0, y:0, width: 320, height:270)
+        headerView.image = UIImage(named: "test1.png")
+        let textView = UITextField(frame: CGRect(x:69, y:245, width: 182, height:30))
+        textView.background = UIImage(named: "test2.png")
+        textView.placeholder = "Enter your name"
+        headerView.addSubview(textView)
+        mTableview.tableHeaderView = headerView
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
