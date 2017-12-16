@@ -55,6 +55,19 @@ class ViewController: UIViewController, UITableViewDataSource,
             as? String
         return cell!
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let alert = UIAlertController(title: "Message", message: "Thank you for calling", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Close It", style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Remove It", style: UIAlertActionStyle.default, handler: { alertAction in
+            
+            self.dataSource.removeObject(at: indexPath.row)
+            print(indexPath.row)
+            self.mTableview.reloadData()
+            
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
