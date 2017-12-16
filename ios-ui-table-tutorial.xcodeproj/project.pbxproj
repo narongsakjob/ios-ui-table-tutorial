@@ -14,6 +14,8 @@
 		CC314AD61FE50D7200E48D62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC314AD41FE50D7200E48D62 /* LaunchScreen.storyboard */; };
 		CC314AE11FE50D7200E48D62 /* ios_ui_table_tutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC314AE01FE50D7200E48D62 /* ios_ui_table_tutorialTests.swift */; };
 		CC314AEC1FE50D7200E48D62 /* ios_ui_table_tutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC314AEB1FE50D7200E48D62 /* ios_ui_table_tutorialUITests.swift */; };
+		CC314AFC1FE5137E00E48D62 /* test1.png in Resources */ = {isa = PBXBuildFile; fileRef = CC314AFA1FE5137E00E48D62 /* test1.png */; };
+		CC314AFD1FE5137E00E48D62 /* test2.png in Resources */ = {isa = PBXBuildFile; fileRef = CC314AFB1FE5137E00E48D62 /* test2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		CC314AE71FE50D7200E48D62 /* ios-ui-table-tutorialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-ui-table-tutorialUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC314AEB1FE50D7200E48D62 /* ios_ui_table_tutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_ui_table_tutorialUITests.swift; sourceTree = "<group>"; };
 		CC314AED1FE50D7200E48D62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC314AFA1FE5137E00E48D62 /* test1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test1.png; sourceTree = "<group>"; };
+		CC314AFB1FE5137E00E48D62 /* test2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		CC314ACA1FE50D7200E48D62 /* ios-ui-table-tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				CC314AF91FE512EC00E48D62 /* Images */,
 				CC314ACB1FE50D7200E48D62 /* AppDelegate.swift */,
 				CC314ACD1FE50D7200E48D62 /* ViewController.swift */,
 				CC314ACF1FE50D7200E48D62 /* Main.storyboard */,
@@ -123,6 +128,15 @@
 				CC314AED1FE50D7200E48D62 /* Info.plist */,
 			);
 			path = "ios-ui-table-tutorialUITests";
+			sourceTree = "<group>";
+		};
+		CC314AF91FE512EC00E48D62 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CC314AFA1FE5137E00E48D62 /* test1.png */,
+				CC314AFB1FE5137E00E48D62 /* test2.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +248,8 @@
 			files = (
 				CC314AD61FE50D7200E48D62 /* LaunchScreen.storyboard in Resources */,
 				CC314AD31FE50D7200E48D62 /* Assets.xcassets in Resources */,
+				CC314AFD1FE5137E00E48D62 /* test2.png in Resources */,
+				CC314AFC1FE5137E00E48D62 /* test1.png in Resources */,
 				CC314AD11FE50D7200E48D62 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

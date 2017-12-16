@@ -12,6 +12,9 @@ class ViewController: UIViewController, UITableViewDataSource,
     UITableViewDelegate {
     
     @IBOutlet weak var mTableview:UITableView!
+    var dataSource:NSMutableArray = NSMutableArray()
+    var headerView:UIImageView = UIImageView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
