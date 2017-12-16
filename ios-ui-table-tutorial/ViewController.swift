@@ -17,10 +17,11 @@ class ViewController: UIViewController, UITableViewDataSource,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        headerView.frame = CGRect(x:0, y:0, width: 320, height:270)
+        headerView.frame = CGRect(x:0, y:0, width: 320, height:300)
         headerView.image = UIImage(named: "test1.png")
-        let textView = UITextField(frame: CGRect(x:69, y:245, width: 182, height:30))
-        textView.background = UIImage(named: "test2.png")
+        let textView = UITextField(frame: CGRect(x:90, y:265, width: 182, height:30))
+        textView.backgroundColor = UIColor.white
+        textView.textAlignment = NSTextAlignment.center
         textView.placeholder = "Enter your name"
         headerView.addSubview(textView)
         mTableview.tableHeaderView = headerView
