@@ -19,13 +19,26 @@ class ViewController: UIViewController, UITableViewDataSource,
         super.viewDidLoad()
         headerView.frame = CGRect(x:0, y:0, width: 320, height:300)
         headerView.image = UIImage(named: "test1.png")
+        headerView.isUserInteractionEnabled = true
         let textView = UITextField(frame: CGRect(x:90, y:265, width: 182, height:30))
         textView.backgroundColor = UIColor.white
         textView.textAlignment = NSTextAlignment.center
         textView.placeholder = "Enter your name"
+        textView.delegate = self
+        textView.clearButtonMode = UITextFieldViewMode.always
         headerView.addSubview(textView)
         mTableview.tableHeaderView = headerView
         
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() // hidden keyboard
+        dataSource.add(textField.text!)
+        print("%s", dataSource.description);
+        mTableview.reloadData()
+        textField.text = ""
+        
+        return true
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -33,12 +46,13 @@ class ViewController: UIViewController, UITableViewDataSource,
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 8
+        return self.dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        cell?.textLabel?.text = "Facelespedia ."
+        cell?.textLabel?.text = self.dataSource.object(at: indexPath.row)
+            as? String
         return cell!
     }
 
